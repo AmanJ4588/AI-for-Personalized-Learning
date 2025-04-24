@@ -13,7 +13,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Initialize Firebase Admin SDK
-cred = credentials.Certificate("C:/Users/Aman/Downloads/ai-for-students-firebase-adminsdk-fbsvc-1d893ff58e.json")  # Load service account key
+cred = credentials.Certificate("")  # Load service account key
 firebase_admin.initialize_app(cred)
 
 # Initialize Firestore Database
@@ -33,7 +33,7 @@ def run_streamlit():
 threading.Thread(target=run_streamlit, daemon=True).start()
 
 # Configure Gemini API
-genai.configure(api_key="AIzaSyB_FZUX2L87MWS561tti3qyoN1qsvRHWpc")
+genai.configure(api_key="")
 # Use Gemini API for response
 model = genai.GenerativeModel("gemini-pro")
 
